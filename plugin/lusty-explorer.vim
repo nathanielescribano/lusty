@@ -1374,7 +1374,8 @@ class BufferGrep < Explorer
     def run
       return if @running
 
-      @prompt.set! @previous_input
+      # making the prompt be empty because I like it that way
+      @prompt.set! ''
       @buffer_entries = GrepEntry::compute_buffer_entries()
 
       @selected_index = @previous_selected_index
